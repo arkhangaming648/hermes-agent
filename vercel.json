@@ -1,5 +1,4 @@
 {
-  "name": "hermes-agent",
   "version": 2,
   "builds": [
     {
