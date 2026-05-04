@@ -3,39 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hermes Agent Web App</title>
+    <title>Hermes Agent - AI-Powered SaaS Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🤖 Hermes Agent</h1>
-            <p class="subtitle">Your AI Assistant Dashboard</p>
-        </header>
-        
-        <main>
-            <section class="card">
-                <h2>Welcome!</h2>
-                <p>This is a simple web application powered by Hermes Agent.</p>
-                <button id="actionBtn" onclick="performAction()">Click Me!</button>
-                <p id="response"></p>
-            </section>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">Hermes Agent</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+            <button class="nav-cta" onclick="scrollToSection('pricing')">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Build Smarter with AI</h1>
+            <p class="hero-subtitle">The complete AI-powered platform for modern businesses. Automate workflows, analyze data, and scale effortlessly.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('pricing')">Start Free Trial</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('products')">Explore Products</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Powerful tools to transform your business</p>
             
-            <section class="card">
-                <h2>Features</h2>
-                <ul>
-                    <li>✨ AI-powered assistance</li>
-                    <li>🚀 Auto-deployment on Vercel</li>
-                    <li>📦 Modern web standards</li>
-                </ul>
-            </section>
-        </main>
-        
-        <footer>
-            <p>Deployed with ❤️ by Hermes Agent</p>
-        </footer>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🤖</div>
+                    <h3>AI Assistant</h3>
+                    <p>Intelligent automation for customer support, data analysis, and workflow optimization.</p>
+                    <ul class="product-features">
+                        <li>Natural Language Processing</li>
+                        <li>24/7 Automated Responses</li>
+                        <li>Smart Analytics</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProduct('ai-assistant')">Learn More</button>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="product-icon">📊</div>
+                    <h3>Data Analytics</h3>
+                    <p>Advanced analytics platform with real-time insights, predictive modeling, and custom dashboards.</p>
+                    <ul class="product-features">
+                        <li>Real-time Dashboards</li>
+                        <li>Predictive Analytics</li>
+                        <li>Custom Reports</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="selectProduct('data-analytics')">Get Started</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🔒</div>
+                    <h3>Security Suite</h3>
+                    <p>Enterprise-grade security with threat detection, compliance monitoring, and automated responses.</p>
+                    <ul class="product-features">
+                        <li>Threat Detection</li>
+                        <li>Compliance Monitoring</li>
+                        <li>Automated Responses</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProduct('security-suite')">Learn More</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🚀</div>
+                    <h3>DevOps Tools</h3>
+                    <p>Streamline your development pipeline with CI/CD automation, infrastructure management, and monitoring.</p>
+                    <ul class="product-features">
+                        <li>CI/CD Automation</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Performance Monitoring</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProduct('devops-tools')">Learn More</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">💬</div>
+                    <h3>Communication Hub</h3>
+                    <p>Unified communication platform with team collaboration, video conferencing, and project management.</p>
+                    <ul class="product-features">
+                        <li>Team Collaboration</li>
+                        <li>Video Conferencing</li>
+                        <li>Project Management</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProduct('communication-hub')">Learn More</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-icon">🎨</div>
+                    <h3>Design Studio</h3>
+                    <p>AI-powered design tools for creating stunning visuals, branding, and marketing materials.</p>
+                    <ul class="product-features">
+                        <li>AI Design Assistant</li>
+                        <li>Brand Templates</li>
+                        <li>Marketing Assets</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectProduct('design-studio')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <p class="section-subtitle">Built for scale, designed for success</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized performance with global CDN and edge computing for instant response times.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption, SOC 2 compliance, and regular security audits.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📈</div>
+                    <h3>Scalable Infrastructure</h3>
+                    <p>Auto-scaling architecture that grows with your business needs.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Availability</h3>
+                    <p>Deploy across multiple regions with built-in redundancy and failover.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Easy Integration</h3>
+                    <p>RESTful APIs, webhooks, and SDKs for seamless integration.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated support team with SLA guarantees and priority response.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the plan that fits your needs</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="price-amount">$29</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p class="price-description">Perfect for small teams</p>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 5 users</li>
+                        <li>✓ 1 Product included</li>
+                        <li>✓ 10GB storage</li>
+                        <li>✓ Email support</li>
+                        <li>✓ Basic analytics</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectPlan('starter')">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Best Value</div>
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="price-amount">$99</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p class="price-description">For growing businesses</p>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 25 users</li>
+                        <li>✓ All 6 Products</li>
+                        <li>✓ 100GB storage</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Advanced analytics</li>
+                        <li>✓ API access</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="selectPlan('professional')">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="price-amount">$299</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p class="price-description">For large organizations</p>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited users</li>
+                        <li>✓ All Products + Custom</li>
+                        <li>✓ Unlimited storage</li>
+                        <li>✓ Dedicated support</li>
+                        <li>✓ Custom integrations</li>
+                        <li>✓ SLA guarantee</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="selectPlan('enterprise')">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Trusted by thousands of businesses worldwide</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Hermes Agent transformed our workflow. We've increased productivity by 40% and our team loves it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <span class="author-name">John Doe</span>
+                            <span class="author-title">CEO, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"The AI Assistant is incredible. It handles 80% of our customer inquiries automatically. Game changer!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Miller</span>
+                            <span class="author-title">CTO, StartupXYZ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Best investment we've made. The analytics platform gives us insights we never had before."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <span class="author-name">Mike Johnson</span>
+                            <span class="author-title">VP Operations, GlobalInc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join thousands of companies already using Hermes Agent</p>
+            <button class="btn btn-primary btn-large" onclick="scrollToSection('pricing')">Start Your Free Trial</button>
+            <p class="cta-note">No credit card required • 14-day free trial • Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Hermes Agent</h4>
+                    <p>AI-powered platform for modern businesses. Automate, analyze, and scale with confidence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">AI Assistant</a></li>
+                        <li><a href="#products">Data Analytics</a></li>
+                        <li><a href="#products">Security Suite</a></li>
+                        <li><a href="#products">DevOps Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hermes Agent. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Get Started</h2>
+            <p id="modal-message">Enter your email to begin your free trial.</p>
+            <form id="signup-form" onsubmit="handleSignup(event)">
+                <input type="email" id="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Start Free Trial</button>
+            </form>
+            <p id="form-message" class="form-message"></p>
+        </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
